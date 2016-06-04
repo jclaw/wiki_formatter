@@ -1,0 +1,12 @@
+.textbody {
+	font-size: 1em;
+	height: 300px;
+	width: 500px;
+	/*border: 1px solid initial;*/
+	display: block;
+}
+
+.textbody[readonly]:focus {
+	outline: none;
+	resize: none;
+}
