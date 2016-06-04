@@ -21,10 +21,6 @@ $(document).ready(function() {
 		var input = $('#wikiText').val();
 		var inputLines = input.split('\n');
 		var output = '';
-		// if (matches.length == 0) {
-		// 	matches = Array(inputLines.length).fill(0);
-		// }
-		// console.log(matches);
 
 		for (var i = 0; i < inputLines.length; i++) {
 			var line = inputLines[i];
@@ -33,7 +29,6 @@ $(document).ready(function() {
 			var regex = new RegExp('(^=+)([^=]*)(=+$)');
 			var n = line.replace(regex, function(match, p1, p2, p3, offset, string) {
 				if (p1 === p3) {
-					// matches[i] = 1;
 					if (operation == 'raise') {
 						if (p1.length == 1) {
 							return [p1, p2, p3].join('');
