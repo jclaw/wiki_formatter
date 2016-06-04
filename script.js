@@ -31,15 +31,19 @@ $(document).ready(function() {
 			var numEqualChars = 0;
 			var header;
 			var regex = new RegExp('(^=+)([^=]*)(=+$)');
-			var alerted = false;
 			var n = line.replace(regex, function(match, p1, p2, p3, offset, string) {
 				if (p1 === p3) {
 					// matches[i] = 1;
-					if (operation == 'raise')
-						// if (!alerted && p1.length == 1) alert('')
-						return [p1.slice(0,-1), p2, p3.slice(0,-1)].join('');
-					else if (operation == 'lower')
+					if (operation == 'raise') {
+						if (p1.length == 1) {
+							return [p1, p2, p3].join('');
+						} else {
+							return [p1.slice(0,-1), p2, p3.slice(0,-1)].join('');
+						}
+
+					} else if (operation == 'lower') {
 						return [p1 + '=', p2, p3 + '='].join('');
+					}
 				} else {
 					return string;
 				}
