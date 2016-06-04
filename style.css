@@ -1,9 +1,18 @@
+.header {
+	padding: 0 20px;
+}
+.content {
+	padding: 20px;
+}
+
 .textbody {
 	font-size: 1em;
 	height: 300px;
-	width: 500px;
+	width: 100%;
+	/*margin: 20px;*/
 	/*border: 1px solid initial;*/
 	display: block;
+	margin-bottom: 15px;
 }
 
 .textbody[readonly]:focus {
