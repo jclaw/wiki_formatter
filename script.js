@@ -2,20 +2,12 @@ $(document).ready(function() {
 	var matches = [];
 
 	$('#raiseHierarchy').click(function() {
-		raiseHierarchy();
+		modifyHeaders('raise');
 	})
 
 	$('#lowerHierarchy').click(function() {
-		lowerHierarchy();
-	})
-
-	function raiseHierarchy() {
-		modifyHeaders('raise');
-	}
-
-	function lowerHierarchy() {
 		modifyHeaders('lower');
-	}
+	})
 
 	function modifyHeaders(operation) {
 		var input = $('#wikiText').val();
