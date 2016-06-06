@@ -18,7 +18,7 @@ $(document).ready(function() {
 			var numEqualChars = 0;
 			var header;
 			var regex = new RegExp('(^=+)([^=]*)(=+$)');
-			var n = line.replace(regex, function(match, p1, p2, p3, offset, string) {
+			var str = line.replace(regex, function(match, p1, p2, p3, offset, string) {
 				if (p1 === p3) {
 					if (operation == 'raise') {
 						if (p1.length == 1) {
@@ -34,7 +34,7 @@ $(document).ready(function() {
 					return string;
 				}
 			});
-			output += n;
+			output += str;
 			if (i < inputLines.length - 1) output += '\n';
 		};
 		$('#wikiText').val(output);
