@@ -15,8 +15,6 @@ $(document).ready(function() {
 
 		for (var i = 0; i < inputLines.length; i++) {
 			var line = inputLines[i];
-			var numEqualChars = 0;
-			var header;
 			var regex = new RegExp('(^=+)([^=]*)(=+$)');
 			var str = line.replace(regex, function(match, p1, p2, p3, offset, string) {
 				if (p1 === p3) {
