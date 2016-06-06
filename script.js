@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	var matches = [];
 
 	$('#raiseHierarchy').click(function() {
 		modifyHeaders('raise');
